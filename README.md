@@ -69,6 +69,14 @@ modalyzer/
 
 ---
 
+## YouTube Tutorial Playlist
+
+A tutorial playlist is provided demonstrating how to use Modalyzer with your own datasets.
+
+https://www.youtube.com/watch?v=fZnCtZ2--gM&list=PLLPCQlWev9z_SivHPs4FIOE7zmSMDCrVj
+
+---
+
 ## Citing
 
 If you use Modalyzer in academic work, citation is appreciated.
