@@ -1,0 +1,36 @@
+name: Test install from TestPyPI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  testpypi:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install from TestPyPI and import
+        shell: bash
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          python -m pip install -U pip
+
+          # Install CPU-only PyTorch FIRST (avoids CUDA/nvidia-* packages)
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.8.0
+
+          # Install your package from TestPyPI; allow deps from PyPI
+          python -m pip install \
+            --index-url https://test.pypi.org/simple/ \
+            --extra-index-url https://pypi.org/simple/ \
+            modalyzer==0.1.2
+
+          python -c "import modalyzer; print('IMPORT OK')"
