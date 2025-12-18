@@ -1,9 +1,10 @@
 # Modalyzer
 
-Open‑source Python library for Operational Modal Analysis (OMA) and system identification.  
-Modalyzer provides multiple algorithms — EFDD/FDD, SSI (cov/data), ITD, and PolyMAX — along with helpers for preprocessing, stabilization diagrams, and drawing mode shapes for common structures.
+Open-source Python library for Operational Modal Analysis (OMA) and system identification.
 
-> **Status:** research code under active revision, shared to accompany an open‑source paper. Interfaces may still evolve.
+Modalyzer provides multiple algorithms — EFDD/FDD, SSI (cov/data), ITD, and PolyMAX (p-LSCF) — along with tools for preprocessing, stabilization diagrams, and mode-shape visualization for common structures.
+
+> **Status:** Actively developed research software. APIs may evolve as the project matures.
 
 ---
 
@@ -20,25 +21,25 @@ Modalyzer provides multiple algorithms — EFDD/FDD, SSI (cov/data), ITD, and Po
 
 ## Installation
 
-Modalyzer is currently distributed as source. You can install it in editable mode:
+Modalyzer is available on PyPI.
 
 ```bash
-# Clone your (test) repository then install locally
-git clone https://github.com/<your-username>/modalyzer-test.git
-cd modalyzer-test
-python -m venv .venv
-# Windows PowerShell:
-. .venv\\Scripts\\Activate.ps1
-pip install -U pip
-pip install -e .  # optional; or just run with PYTHONPATH
+pip install modalyzer
 ```
 
-If you don't have a `setup.py/pyproject.toml` yet, you can still **use it as a plain package** by keeping this repo root on your `PYTHONPATH` or by running examples from the repo root.
+CPU-only PyTorch (recommended)
+
+Modalyzer is CPU-only. To avoid CUDA downloads on Linux, install PyTorch explicitly from the CPU index before installing Modalyzer:
+```bash
+pip install --index-url https://download.pytorch.org/whl/cpu torch
+pip install modalyzer
+```
 
 ### Dependencies
-The modules use: `numpy`, `pandas`, `matplotlib`, `scipy`, `torch`, and optionally `plotly`. Install them with:
+The modules use: `numpy`, `pandas`, `matplotlib`, `scipy`, `torch`, `plotly`, and `nbformat`. They will be install alongside modalyzer.
+Also you can install them manually (not recommended):
 ```bash
-pip install numpy pandas matplotlib scipy torch plotly
+pip install numpy pandas matplotlib scipy torch plotly nbformat
 ```
 
 ---
@@ -55,6 +56,8 @@ modalyzer/
 │  ├─ ITD.py                # ITD_alg(), helpers for correlation & poles
 │  ├─ PolyMAX.py            # PolyMAX(), independent_mode_shape(), stabilization_diagram(), ...
 │  └─ ModeShape.py          # draw_mode_shapes(), draw_MAC_diagram(), structure‑specific plotters
+├─ Examples/
+│  └─ ...
 ├─ tests/
 │  └─ test_basic.py
 ├─ README.md
@@ -68,15 +71,18 @@ modalyzer/
 
 ## Citing
 
-If this library helps your research, please cite the Modalyzer paper (details will be added once it is published). You can also star the repository to support the project.
+If you use Modalyzer in academic work, citation is appreciated.
 
-A `CITATION.cff` will be added after publication.
+Shamsaddinlou, A., Nikoofaraz, M., De Domenico, D., & Longo, M.
+Computationally Efficient Python-based Operational Modal Analysis of Structures: Modalyzer.
+Journal of Vibration and Control. https://doi.org/10.1177/10775463251410790
 
 ---
 
 ## License
 
-This project is licensed under the terms in `LICENSE` (e.g., BSD‑3‑Clause or MIT depending on your choice).
+This project is released under the MIT License.
+See the LICENSE file for details.
 
 ---
 
@@ -84,7 +90,7 @@ This project is licensed under the terms in `LICENSE` (e.g., BSD‑3‑Clause or
 
 Pull requests and issues are welcome. If you plan significant changes, please open an issue to discuss the proposal first.
 
-- Run tests with `pytest` (to be expanded).
-- Follow PEP8/black where possible.
+- Please use example Jupyter notebooks in Examples folder for test. Data is provided.
+- Open an issue for bug reports or feature requests
 - Please include small reproducible examples when reporting bugs.
 
