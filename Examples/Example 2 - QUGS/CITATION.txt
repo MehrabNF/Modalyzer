@@ -1,0 +1,17 @@
+http://onur-avci.com/benchmark/qugs/
+
+Avci, O., Abdeljaber, O., Kiranyaz, S., Hussein, M., Gabbouj, M., Inman, D. (2022). A New Benchmark Problem for Structural Damage Detection: Bolt Loosening Tests on a Large-Scale Laboratory Structure. In: Grimmelsman, K. (eds) Dynamics of Civil Structures, Volume 2. Conference Proceedings of the Society for Experimental Mechanics Series. Springer, Cham.
+
+Avci, O., Abdeljaber, O., Kiranyaz, S., Hussein, M.F.M. and Inman, D.J. (2018). “Wireless and Real-Time Structural Damage Detection: A Novel Decentralized Method for Wireless Sensor Networks”, Journal of Sound and Vibration, Elsevier
+
+Abdeljaber, O., Avci, O., Kiranyaz, S., Boashash, B., Sodano, H. and Inman, D.J. (2018). “1-D CNNs for Structural Damage Detection: Verification on a Structural Health Monitoring Benchmark Data”, Neurocomputing (Elsevier).
+
+Abdeljaber, O., Avci, O., Kiranyaz, S., Gabbouj, M. and Inman, D.J. (2017). “Real-Time Vibration-Based Structural Damage Detection Using One-Dimensional Convolutional Neural Networks”, Journal of Sound and Vibration, Elsevier.
+
+Avci, O., Abdeljaber, O., Kiranyaz. S., and Inman, D.J. (2017). “Structural Damage Detection in Real-Time: Implementation of 1D Convolutional Neural Networks for SHM Applications”, IMAC XXXV, Conference and Exposition on Structural Dynamics, January 30-February 2, 2017, Garden Grove, CA, USA.
+
+Kiranyaz. S., Ince, T., Abdeljaber, O., Avci, O. and Gabbouj, M. (2019). “1-D Convolutional Neural Networks for Signal Processing Applications”, International Conference on Acoustics, Speech, and Signal Processing, 12-17 May, 2019, Brighton, UK.
+
+Avci, O., Abdeljaber, O., Kiranyaz. S., and Inman, D.J. (2019). “Convolutional Neural Networks for Real-time and Wireless Damage Detection”, IMAC XXXVII, International Modal Analysis Conference, January 28-31, 2019, Orlando, FL, USA.
+
+Kiranyaz, S., Avci, O., Abdeljaber, O., Ince, T., Gabbouj, M. and Inman, D.J. (2021). “1D Convolutional Neural Networks and Applications: A Survey”, Mechanical Systems and Signal Processing, Elsevier.
